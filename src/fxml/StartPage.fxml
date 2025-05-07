@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import controller.StartPageController?>
+
+<VBox fx:controller="controller.StartPageController" xmlns:fx="http://javafx.com/fxml" spacing="10" alignment="CENTER">
+    <children>
+        <Label fx:id="studentDetailsLabel" style="-fx-padding: 5 10; "/>
+        <VBox spacing="10" alignment="CENTER" style="-fx-padding: 10 120; "> 
+            <Button fx:id="startButton" text="Start" onAction="#startButtonAction"/>
+        </VBox>
+    </children>
+</VBox>

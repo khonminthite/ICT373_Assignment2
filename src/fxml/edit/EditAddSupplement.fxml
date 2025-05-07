@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="controller.edit.EditAddSupplementController" spacing="10">
+    <children>
+        <Label text="Add Supplement" style="-fx-font-weight: bold; -fx-font-size: 18px; -fx-padding: 7 90; "/>
+        <HBox spacing="10" style="-fx-padding: 7 10; ">
+            <HBox spacing="2">
+                <Label text="Supplement Name"/>
+                <Label text="*" style="-fx-text-fill: red;"/>
+            </HBox>
+            <TextField fx:id="supplementName" promptText="Enter name here"/>
+            <Label fx:id="nameError" text="" style="-fx-text-fill: red;"/>
+        </HBox>
+        <HBox spacing="10" style="-fx-padding: 7 10; ">
+            <HBox spacing="2">
+                <Label text="Supplement Weekly Cost"/>
+                <Label text="*" style="-fx-text-fill: red;"/>
+            </HBox>
+            <TextField fx:id="supplementCost" promptText="Enter cost here"/>
+            <Label fx:id="costError" text="" style="-fx-text-fill: red;"/>
+        </HBox>
+
+        <HBox spacing="10" style="-fx-padding: 7 10; ">
+            <Button fx:id="cancelButton" text="Cancel" onAction="#cancelAction"/>
+            <Region HBox.hgrow="ALWAYS"/>
+            <Button fx:id="createSupplementButton" text="Create Supplement" onAction="#createSupplementAction"/>
+        </HBox>
+    </children>
+</VBox>

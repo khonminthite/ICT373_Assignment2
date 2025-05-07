@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"controller"},{"l":"controller.create"},{"l":"controller.edit"},{"l":"customer"},{"l":"helper"},{"l":"magazine"},{"l":"model"}];updateSearchResults();

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import controller.ViewController?>
+
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="controller.ViewController" spacing="10">
+    <children>
+        <HBox spacing="30" alignment="CENTER" style="-fx-padding: 10 10;">
+            <Button fx:id="viewButton" text="View" onAction="#viewAction"/>
+            <Button fx:id="editButton" text="Edit" onAction="#editAction"/>
+            <Button fx:id="createButton" text="Create" onAction="#createAction"/>
+        </HBox>
+        <HBox>
+            <VBox prefWidth="250">
+                <Label text="Customers"/>
+                <TreeView fx:id="customerList"/>
+            </VBox>
+            <VBox prefWidth="250">
+                <Label text="Supplements"/>
+                <TreeView fx:id="supplementList"/>
+            </VBox>
+            <VBox prefWidth="400">
+                <Label text="Information Panel"/>
+                <TreeView fx:id="infoPanel"/>
+            </VBox>
+        </HBox>
+    </children>
+</VBox>
