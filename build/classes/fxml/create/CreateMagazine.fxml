@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="controller.create.CreateMagazineController" spacing="10">
+    <children>
+        <HBox alignment="TOP_CENTER" style="-fx-padding: 10 0; -fx-font-size: 18px;">
+            <Label text="Create Magazine" style="-fx-font-weight: bold; "/>
+        </HBox>
+        <HBox spacing="10" style="-fx-padding: 10 5; " alignment="CENTER">
+            <HBox spacing="2">
+                <Label fx:id="costLabel" text="Magazine Weekly Cost"/>
+                <Label fx:id="mandatoryIndicator" text="*" style="-fx-text-fill: red;"/>
+            </HBox>
+            <TextField fx:id="magazineCost" promptText="Enter cost here"/>
+            <Label fx:id="costError" text="" style="-fx-text-fill: red;"/>
+        </HBox>
+        <HBox alignment="CENTER">
+            <VBox style="-fx-padding: 10 10; ">
+                <Button fx:id="cancelButton" text="Cancel" onAction="#cancelAction"/>
+            </VBox>
+            <Region HBox.hgrow="ALWAYS"/>  
+            <VBox style="-fx-padding: 10 10; ">
+                <Button fx:id="createMagazineButton" text="Finish Creating Magazine" onAction="#createMagazineAction"/>
+            </VBox>
+        </HBox>
+    </children>
+</VBox>

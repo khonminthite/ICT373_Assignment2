@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.collections.FXCollections?>
+<?import java.lang.String?>
+
+<ScrollPane xmlns:fx="http://javafx.com/fxml" fx:controller="controller.edit.EditPayingCustomerController">
+    <VBox spacing="10">
+        <children>
+            <Label text="Edit Paying Customer" style="-fx-font-weight: bold; -fx-font-size: 18px; -fx-padding: 0 100;"/>
+            <HBox spacing="10" style="-fx-padding: 0 10;">
+                <HBox spacing="2">
+                    <Label text="Name"/>
+                    <Label text="*" style="-fx-text-fill: red;"/>
+                </HBox>
+                <TextField fx:id="customerName" promptText="Enter name here"/>
+                <Label fx:id="nameError" text="" style="-fx-text-fill: red;"/>
+            </HBox>
+            <HBox spacing="10" style="-fx-padding: 0 10;">
+                <HBox spacing="2">
+                    <Label text="Email"/>
+                    <Label text="*" style="-fx-text-fill: red;"/>
+                </HBox>
+                <TextField fx:id="customerEmail" promptText="Enter email here"/>
+                <Label fx:id="emailError" text="" style="-fx-text-fill: red;"/>
+            </HBox>
+            <HBox spacing="10" style="-fx-font-weight: bold; -fx-padding: 0 10;">
+                <Label text="Address: "/>
+            </HBox>
+            <HBox spacing="10" style="-fx-padding: 0 10;">
+                <HBox spacing="2">
+                    <Label text="Street Number"/>
+                    <Label text="*" style="-fx-text-fill: red;"/>
+                </HBox>
+                <TextField fx:id="streetNumber" promptText="Enter street number"/>
+                <Label fx:id="streetNumberError" text="" style="-fx-text-fill: red;"/>
+            </HBox>
+            <HBox spacing="10" style="-fx-padding: 0 10;">
+                <HBox spacing="2">
+                    <Label text="Street Name"/>
+                    <Label text="*" style="-fx-text-fill: red;"/>
+                </HBox>
+                <TextField fx:id="streetName" promptText="Enter street name"/>
+                <Label fx:id="streetNameError" text="" style="-fx-text-fill: red;"/>
+            </HBox>
+            <HBox spacing="10" style="-fx-padding: 0 10;">
+                <Label text="Suburb"/>
+                <TextField fx:id="suburb" promptText="Enter suburb"/>
+            </HBox>
+            <HBox spacing="10" style="-fx-padding: 0 10;">
+                <HBox spacing="2">
+                    <Label text="Postcode"/>
+                    <Label text="*" style="-fx-text-fill: red;"/>
+                </HBox>
+                <TextField fx:id="postcode" promptText="Enter postcode"/>
+                <Label fx:id="postcodeError" text="" style="-fx-text-fill: red;"/>
+            </HBox>
+            <HBox spacing="10" style="-fx-padding: 0 10;">
+                <Label text="Supplements  "/>
+                <TableView fx:id="supplementSelection" maxHeight="150"/>
+            </HBox>
+            <HBox spacing="10" style="-fx-padding: 0 10;">
+                <HBox spacing="2">
+                    <Label text="Payment Method"/>
+                    <Label text="*" style="-fx-text-fill: red;"/>
+                </HBox>
+                <ComboBox fx:id="paymentMethod">
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value="card"/>
+                            <String fx:value="bank"/>
+                        </FXCollections>
+                    </items>
+                </ComboBox>
+                <Label fx:id="paymentMethodError" text="" style="-fx-text-fill: red;"/>
+            </HBox>
+            <HBox spacing="10" style="-fx-padding: 0 10;">
+                <HBox spacing="2">
+                    <Label text="Payment Details"/>
+                    <Label text="*" style="-fx-text-fill: red;"/>
+                </HBox>
+                <TextField fx:id="paymentDetails" promptText="Enter payment details"/>
+                <Label fx:id="paymentDetailsError" text="" style="-fx-text-fill: red;"/>
+            </HBox>
+            
+            <HBox spacing="10" style="-fx-padding: 5 10;">
+                <Button fx:id="cancelButton" text="Cancel" onAction="#cancelAction"/>
+                <Region HBox.hgrow="ALWAYS"/>
+                <Button fx:id="saveButton" text="Save" onAction="#saveAction"/>
+            </HBox>
+        </children>
+    </VBox>
+</ScrollPane>

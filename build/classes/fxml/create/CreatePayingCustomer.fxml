@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.collections.FXCollections?>
+<?import java.lang.String?>
+
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="controller.create.CreatePayingCustomerController" spacing="10">
+    <children>
+        <Label text="Create Paying Customer" style="-fx-font-weight: bold; -fx-font-size: 18px; -fx-padding: 0 50;"/>
+        <HBox spacing="10" style="-fx-padding: 5 10;">
+            <HBox spacing="2">
+                <Label text="Payment Method"/>
+                <Label text="*" style="-fx-text-fill: red;"/>
+            </HBox>
+            <ComboBox fx:id="paymentMethod">
+                <items>
+                    <FXCollections fx:factory="observableArrayList">
+                        <String fx:value="card"/>
+                        <String fx:value="bank"/>
+                    </FXCollections>
+                </items>
+            </ComboBox>
+            <Label fx:id="paymentMethodError" text="" style="-fx-text-fill: red;"/>
+        </HBox>
+        <HBox spacing="10" style="-fx-padding: 5 10;">
+            <HBox spacing="2">
+                <Label text="Payment Details"/>
+                <Label text="*" style="-fx-text-fill: red;"/>
+            </HBox>
+            <TextField fx:id="paymentDetails" promptText="Enter payment details"/>
+            <Label fx:id="paymentDetailsError" text="" style="-fx-text-fill: red;"/>
+        </HBox>
+
+        <HBox spacing="10" style="-fx-padding: 10 10;">
+            <Button fx:id="cancelButton" text="Cancel" onAction="#cancelAction"/>
+            <Region HBox.hgrow="ALWAYS"/>
+            <VBox spacing="5">
+                <Button fx:id="createAnotherCustomerButton" text="Create Another Customer" onAction="#createAnotherCustomerAction"/>
+                <Button fx:id="createPayingCustomerButton" text="Finish Creating Customer" onAction="#createPayingCustomerAction"/>
+            </VBox>
+        </HBox>
+    </children>
+</VBox>

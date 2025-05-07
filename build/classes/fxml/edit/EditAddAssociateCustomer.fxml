@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="controller.edit.EditAddAssociateCustomerController">
+    <children>
+        <Label text="Create Associate Customer" style="-fx-font-weight: bold; -fx-font-size: 18px; -fx-padding: 10 50;"/>
+        <HBox spacing="10" style="-fx-padding: 10 10;">
+            <HBox spacing="2">
+                <Label text="Paying Customer Email"/>
+                <Label text="*" style="-fx-text-fill: red;"/>
+            </HBox>
+            <ComboBox fx:id="payingCustomerEmail" promptText="Select paying customer"/>
+            <Label fx:id="payingCustomerEmailError" text="" style="-fx-text-fill: red;"/>
+        </HBox>
+        
+        <HBox spacing="10" style="-fx-padding: 10 10;">
+            <Button fx:id="cancelButton" text="Cancel" onAction="#cancelAction"/>
+            <Region HBox.hgrow="ALWAYS"/>
+            <Button fx:id="createAssociateCustomerButton" text="Create Associate Customer" onAction="#createAssociateCustomerAction"/>
+        </HBox>
+    </children>
+</VBox>
